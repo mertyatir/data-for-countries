@@ -59,7 +59,7 @@ function App() {
         <div>Too many matches, specify another filter</div>
       </div>
     )
-  else if (countries.length === 1) {
+  else if (countries.length === 1 && weatherData) {
     const img = weatherData.weather[0].icon
     return (
       <div>
