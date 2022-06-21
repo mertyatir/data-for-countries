@@ -35,7 +35,6 @@ function App() {
       const lat = countries[0].latlng[0]
       const lng = countries[0].latlng[1]
       const api_key = process.env.REACT_APP_API_KEY
-      console.log("key", api_key)
       axios
         .get(
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${api_key}&units=metric`
