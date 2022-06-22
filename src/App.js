@@ -32,8 +32,8 @@ function App() {
 
   useEffect(() => {
     if (countries.length === 1) {
-      const lat = countries[0].latlng[0]
-      const lng = countries[0].latlng[1]
+      const lat = countries[0].capitalInfo.latlng[0]
+      const lng = countries[0].capitalInfo.latlng[1]
       const api_key = process.env.REACT_APP_API_KEY
       axios
         .get(
