@@ -40,7 +40,6 @@ function App() {
           `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${api_key}&units=metric`
         )
         .then((response) => {
-          console.log("response", response)
           setWeatherData(response.data)
         })
     }
@@ -74,6 +73,14 @@ function App() {
           <ul>
             {Object.values(countries[0].languages).map((language) => (
               <li key={language}>{language}</li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3>Continents:</h3>
+          <ul>
+            {Object.values(countries[0].continents).map((continent) => (
+              <li key={continent}>{continent}</li>
             ))}
           </ul>
         </div>
